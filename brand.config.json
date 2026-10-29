@@ -6,10 +6,7 @@
         "production": "rgtrades.com/dashboard"
     },
     "domain_name": "RGTrades.com",
-    "colors": {
-        "primary": "#00e6d6",
-        "secondary": "#64748b",
-        "tertiary": "#8b5cf6",
+    "colors":
         "success": "#10b981",
         "danger": "#ef4444",
         "warning": "#f59e0b",
