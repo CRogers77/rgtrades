@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
-import { Outlet } from 'react-router';
+import { Outlet, useLocation } from 'react-router';
 import { api_base } from '@/external/bot-skeleton';
 import { useStore } from '@/hooks/useStore';
 import { useDevice } from '@deriv-com/ui';
@@ -13,6 +13,7 @@ import Body from './main-body';
 import './layout.scss';
 
 const Layout = observer(() => {
+    const location = useLocation();
     const { isDesktop } = useDevice();
     const store = useStore();
     const is_quick_strategy_active = store?.quick_strategy?.is_open;
@@ -141,6 +142,8 @@ const Layout = observer(() => {
             return () => clearTimeout(timer);
         }
     }, [isAuthenticating, isInitialAuthCheckComplete]);
+
+    if (location.pathname === '/') return <Outlet />;
 
     return (
         <div

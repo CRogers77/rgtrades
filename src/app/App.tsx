@@ -16,6 +16,7 @@ import './app-root.scss';
 
 const Layout = lazy(() => import('../components/layout'));
 const AppRoot = lazy(() => import('./app-root'));
+const Welcome = lazy(() => import('../pages/welcome/welcome'));
 
 /**
  * Component wrapper to handle language URL parameter
@@ -55,7 +56,8 @@ const router = createBrowserRouter(
             }
         >
             {/* All child routes will be passed as children to Layout */}
-            <Route index element={<AppRoot />} />
+            <Route index element={<Welcome />} />
+            <Route path='workspace' element={<AppRoot />} />
             {/* App Builder embeds the template at /preview — render the same app shell */}
             <Route path='preview' element={<AppRoot />} />
         </Route>
@@ -80,6 +82,7 @@ function App() {
         if (!urlParams.has('code')) return;
 
         const handleCallback = async () => {
+            let didAuthenticate = false;
             try {
                 const authInfo = await handleOAuthCallback(window.location.href, {
                     clientId: process.env.NEXT_PUBLIC_DERIV_APP_ID || '',
@@ -100,6 +103,7 @@ function App() {
 
                     const { api_base } = await import('@/external/bot-skeleton');
                     await api_base.init(true);
+                    didAuthenticate = true;
                 } else {
                     console.error('No accounts returned after authentication');
                 }
@@ -107,6 +111,9 @@ function App() {
                 console.error('OAuth callback error:', error);
             } finally {
                 cleanupUrl(window.location.origin);
+            }
+            if (didAuthenticate) {
+                await router.navigate('/workspace', { replace: true });
             }
         };
 
