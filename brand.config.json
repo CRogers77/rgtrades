@@ -1,5 +1,3 @@
-<!-- Reference only — see note below -->
-<ul id="free-bots-list"></ul>
 
 <script>
   // List your XML files here — keep filenames in sync with public/bots/
