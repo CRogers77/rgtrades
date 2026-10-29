@@ -7,9 +7,9 @@
     },
     "domain_name": "YourBrand.com",
     "colors": {
-        "primary": "#00e6d6",
-        "secondary": "#64748b",
-        "tertiary": "#8b5cf6",
+        "primary": "#8b0000",
+        "secondary": "#1a0000",
+        "tertiary": "#d9b75c",
         "success": "#10b981",
         "danger": "#ef4444",
         "warning": "#f59e0b",
@@ -32,7 +32,7 @@
     },
     "typography": {
         "font_family": {
-            "primary": "Inter",
+            "primary": "'IBM Plex Sans', sans-serif",
             "secondary": "Georgia, 'Times New Roman', Times, serif",
             "monospace": "'Courier New', Courier, monospace"
         },
