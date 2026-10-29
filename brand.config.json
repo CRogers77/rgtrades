@@ -1,11 +1,11 @@
 {
-    "brand_name": "RG Trades",
-    "brand_domain": "rgtrades.netlify.app",
+    "brand_name": "YourBrand",
+    "brand_domain": "yourbrand.com",
     "brand_hostname": {
-        "staging": "rgtrades.netlify.app/dashboard",
-        "production": "rgtrades.netlify.app/dashboard"
+        "staging": "staging.yourbrand.com/dashboard",
+        "production": "yourbrand.com/dashboard"
     },
-    "domain_name": "rgtrades.netlify.app",
+    "domain_name": "YourBrand.com",
     "colors": {
         "primary": "#00e6d6",
         "secondary": "#64748b",
@@ -48,9 +48,30 @@
         }
     },
     "color_variants": {
-        "light_variants": [100, 200, 300, 400, 500],
-        "dark_variants": [600, 700, 800, 900],
-        "opacity_variants": [10, 20, 30, 40, 50, 60, 70, 80, 90]
+        "light_variants": [
+            100,
+            200,
+            300,
+            400,
+            500
+        ],
+        "dark_variants": [
+            600,
+            700,
+            800,
+            900
+        ],
+        "opacity_variants": [
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90
+        ]
     },
     "theme_config": {
         "enable_dynamic_themes": true,
@@ -68,10 +89,10 @@
         },
         "hostname": {
             "production": {
-                "com": "rgtrades.netlify.app"
+                "com": "bot.yourbrand.com"
             },
             "staging": {
-                "com": "rgtrades.netlify.app"
+                "com": "staging-bot.yourbrand.com"
             }
         },
         "auth2_url": {
