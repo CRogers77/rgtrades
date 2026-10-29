@@ -1,11 +1,11 @@
 {
     "brand_name": "RG Trades",
-    "brand_domain": "rgtrades.com",
+    "brand_domain": "rgtrades.netlify.app",
     "brand_hostname": {
-        "staging": "staging.rgtrades.com/dashboard",
-        "production": "rgtrades.com/dashboard"
+        "staging": "rgtrades.netlify.app/dashboard",
+        "production": "rgtrades.netlify.app/dashboard"
     },
-    "domain_name": "RGTrades.com",
+    "domain_name": "rgtrades.netlify.app",
     "colors": {
         "primary": "#00e6d6",
         "secondary": "#64748b",
@@ -68,10 +68,10 @@
         },
         "hostname": {
             "production": {
-                "com": "bot.rgtrades.com"
+                "com": "rgtrades.netlify.app"
             },
             "staging": {
-                "com": "staging-bot.rgtrades.com"
+                "com": "rgtrades.netlify.app"
             }
         },
         "auth2_url": {
